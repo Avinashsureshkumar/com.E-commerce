@@ -18,6 +18,9 @@ public class MainPage extends BasePage {
 	@FindBy(xpath = "//h2[normalize-space()='New User Signup!']")
 	WebElement signupText;
 	
+	@FindBy(css="div[class='login-form'] h2")
+	WebElement loginText;
+	
 	@FindBy(xpath = "//input[@placeholder='Name']")
 	WebElement regUserName;
 	
@@ -90,9 +93,30 @@ public class MainPage extends BasePage {
 	@FindBy(css = "h2[class='title text-center'] b")
 	WebElement accCreated;
 	
+	@FindBy(xpath = "//input[@data-qa='login-email']")
+	WebElement loginEmail;
+	
+	@FindBy(xpath = "//input[@placeholder='Password']")
+	WebElement loginPass;
+	
+	@FindBy(xpath = "//button[normalize-space()='Login']")
+	WebElement loginBT;
+	
+	@FindBy(xpath = "//b")
+	WebElement userVisible;
+	
+	@FindBy(xpath = "//a[normalize-space()='Delete Account']")
+	WebElement deleteUser;
+	
+	@FindBy(css = "h2[class='title text-center'] b")
+	WebElement deleteText;
 	
 	public void signUpLink() {
 		signuplogin.click();	
+	}
+	
+	public String loginText() {
+		return loginText.getText();
 	}
 	
 	public String signUpText() {
@@ -104,7 +128,7 @@ public class MainPage extends BasePage {
 	}
 	
 	public void regEmail() {
-		regEmailAdd.sendKeys("abedefgh1234@gmail.com");
+		regEmailAdd.sendKeys("abedefgh123456@gmail.com");
 	}
 	
 	public void signup_BT() {
@@ -189,6 +213,31 @@ public class MainPage extends BasePage {
     public boolean ConfMsgAccCreated() {
     	return accCreated.isDisplayed();
     }
+    
+    public void loginEmail() {
+    	loginEmail.sendKeys("abedefgh123456@gmail.com");
+    }
+    
+    public void loginPass() {
+    	loginPass.sendKeys("DemoTest1234");
+    }
+    
+    public void loginBT() {
+    	loginBT.click();
+    }
+    
+    public String userVisible() {
+    	return userVisible.getText();
+    }
+    
+    public void deleteUser() {
+    	deleteUser.click();
+    }
+    
+    public String deleteText() {
+    	return deleteText.getText();
+    }
+    
    
 
 }

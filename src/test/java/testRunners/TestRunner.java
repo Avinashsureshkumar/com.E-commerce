@@ -5,9 +5,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features= {"./src/test/resources/features/Registration.feature"},
+@CucumberOptions(features= {"./src/test/resources/features/"},
                 glue= {"stepDefinations","hooks"},  
-                plugin= {"pretty"},
+                plugin= {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
                 publish= true,
                 dryRun= false
                 
@@ -15,6 +15,6 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-public class AccInfoRunner {
+public class TestRunner {
 
 }

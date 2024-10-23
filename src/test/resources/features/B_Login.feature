@@ -1,3 +1,4 @@
+
 Feature: Login
 
   Scenario: Login with valid pwd
@@ -8,5 +9,5 @@ Feature: Login
     When The usere Enters correct email address and password
     When Click login button
     Then Verify that Logged in as username is visible
-
- 
+    When The user clicks on delete acc button
+    Then Verify that ACCOUNT DELETED is visible

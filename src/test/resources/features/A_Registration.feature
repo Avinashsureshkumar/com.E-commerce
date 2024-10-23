@@ -1,3 +1,4 @@
+
 Feature: User Registration
 
   Scenario: ACCOUNT INFORMATION is visible
